@@ -115,8 +115,8 @@ h2 {
     }
 
     .container {
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .miniBio {
@@ -141,5 +141,17 @@ h2 {
 
     .articleListItem h1 {
         font-size: 26px;
+    }
+
+    .articleDetailHeadline h1 {
+        font-size: 37px;
+        line-height: 37px;
+    }
+
+    .articleDetailHeadline h2 {
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 } 

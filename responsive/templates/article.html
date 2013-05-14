@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block main %}
 <div class="container">
@@ -17,6 +17,7 @@
         </div>
         <div class="span6 articleDetailContent">
             {{ article.content }}
+            {% include "disqus_script.html" %}
         </div>
     </div>
 </div>
