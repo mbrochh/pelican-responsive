@@ -13,9 +13,9 @@
 
         {% for page_num in articles_paginator.page_range %}
             {% if page_num == 1 %}
-                <li><a href={{ SITEURL }}/{{ page_name }}.html>{{ page_num }}</a></li>
+                <li {% if articles_page.number == page_num %}class="active"{% endif %}><a href={{ SITEURL }}/{{ page_name }}.html>{{ page_num }}</a></li>
             {% else %}
-                <li><a href={{ SITEURL }}/{{ page_name }}{{ page_num }}.html>{{ page_num }}</a></li>
+                <li {% if articles_page.number == page_num %}class="active"{% endif %}><a href={{ SITEURL }}/{{ page_name }}{{ page_num }}.html>{{ page_num }}</a></li>
             {% endif %}
         {% endfor %}
 
