@@ -12,6 +12,14 @@
 
     <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css' >
     <link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
+
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% include 'analytics.html' %}
 </head>
 <body>
     <div class="miniBio">
@@ -47,6 +55,5 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-    {% include 'analytics.html' %}
 </body>
 </html>
